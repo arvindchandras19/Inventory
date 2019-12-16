@@ -1,0 +1,2017 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3CCEC5BD-069D-4F8E-B42E-CB319E0EF65D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44321</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>E:\NEW_INVENTRORY_PROJECT\Inventory System\Inventory\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.4.1\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="AddUser.aspx" />
+    <Content Include="CapitalItem.aspx" />
+    <Content Include="CapitalOrder.aspx" />
+    <Content Include="CapitalReceivingOrder.aspx" />
+    <None Include="Connected Services\Inventoryserref\InventoryService.disco" />
+    <None Include="Connected Services\Inventoryserref\configuration91.svcinfo" />
+    <None Include="Connected Services\Inventoryserref\configuration.svcinfo" />
+    <None Include="Connected Services\Inventoryserref\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="CorpEquipmentMap.aspx" />
+    <Content Include="CorporateMaster.aspx" />
+    <Content Include="DashboardPage.aspx" />
+    <Content Include="Dashboard\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Dashboard\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Dashboard\bootstrap\css\bootstrap.css" />
+    <Content Include="Dashboard\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Dashboard\dist\css\alt\AdminLTE-bootstrap-social.css" />
+    <Content Include="Dashboard\dist\css\alt\AdminLTE-bootstrap-social.min.css" />
+    <Content Include="Dashboard\dist\css\alt\AdminLTE-fullcalendar.css" />
+    <Content Include="Dashboard\dist\css\alt\AdminLTE-fullcalendar.min.css" />
+    <Content Include="Dashboard\dist\css\alt\AdminLTE-select2.css" />
+    <Content Include="Dashboard\dist\css\alt\AdminLTE-select2.min.css" />
+    <Content Include="Dashboard\dist\css\alt\AdminLTE-without-plugins.css" />
+    <Content Include="Dashboard\dist\css\alt\AdminLTE-without-plugins.min.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-black-light.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-black-light.min.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-black.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-black.min.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-blue-light.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-blue-light.min.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-blue.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-blue.min.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-green-light.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-green-light.min.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-green.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-green.min.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-purple-light.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-purple-light.min.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-purple.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-purple.min.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-red-light.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-red-light.min.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-red.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-red.min.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-yellow-light.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-yellow-light.min.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-yellow.css" />
+    <Content Include="Dashboard\dist\css\skins\skin-yellow.min.css" />
+    <Content Include="Dashboard\dist\css\skins\_all-skins.css" />
+    <Content Include="Dashboard\dist\css\skins\_all-skins.min.css" />
+    <Content Include="Dashboard\dist\css\skins\_all-skinsdarkblue.min.css" />
+    <Content Include="Dashboard\dist\css\skins\_all-skinsOwn1.min.css" />
+    <Content Include="Dashboard\dist\css\skins\_all-skinsOwn2.min.css" />
+    <Content Include="Dashboard\dist\css\skins\_all-skins_Purple.min.css" />
+    <Content Include="Dashboard\dist\img\avatar.png" />
+    <Content Include="Dashboard\dist\img\avatar04.png" />
+    <Content Include="Dashboard\dist\img\avatar2.png" />
+    <Content Include="Dashboard\dist\img\avatar3.png" />
+    <Content Include="Dashboard\dist\img\avatar5.png" />
+    <Content Include="Dashboard\dist\img\boxed-bg.jpg" />
+    <Content Include="Dashboard\dist\img\boxed-bg.png" />
+    <Content Include="Dashboard\dist\img\credit\american-express.png" />
+    <Content Include="Dashboard\dist\img\credit\cirrus.png" />
+    <Content Include="Dashboard\dist\img\credit\mastercard.png" />
+    <Content Include="Dashboard\dist\img\credit\mestro.png" />
+    <Content Include="Dashboard\dist\img\credit\paypal.png" />
+    <Content Include="Dashboard\dist\img\credit\paypal2.png" />
+    <Content Include="Dashboard\dist\img\credit\visa.png" />
+    <Content Include="Dashboard\dist\img\default-50x50.gif" />
+    <Content Include="Dashboard\dist\img\icons.png" />
+    <Content Include="Dashboard\dist\img\img.jpg" />
+    <Content Include="Dashboard\dist\img\photo1.png" />
+    <Content Include="Dashboard\dist\img\photo2.png" />
+    <Content Include="Dashboard\dist\img\photo3.jpg" />
+    <Content Include="Dashboard\dist\img\photo4.jpg" />
+    <Content Include="Dashboard\dist\img\user1-128x128.jpg" />
+    <Content Include="Dashboard\dist\img\user2-160x160.jpg" />
+    <Content Include="Dashboard\dist\img\user3-128x128.jpg" />
+    <Content Include="Dashboard\dist\img\user4-128x128.jpg" />
+    <Content Include="Dashboard\dist\img\user5-128x128.jpg" />
+    <Content Include="Dashboard\dist\img\user6-128x128.jpg" />
+    <Content Include="Dashboard\dist\img\user7-128x128.jpg" />
+    <Content Include="Dashboard\dist\img\user8-128x128.jpg" />
+    <Content Include="Dashboard\dist\js\app.js" />
+    <Content Include="Dashboard\dist\js\app.min.js" />
+    <Content Include="Dashboard\dist\js\demo.js" />
+    <Content Include="Dashboard\dist\js\notify.js" />
+    <Content Include="Dashboard\dist\js\pages\dashboard.js" />
+    <Content Include="Dashboard\dist\js\pages\dashboard2.js" />
+    <Content Include="Dashboard\documentation\build\include\adminlte-options.html" />
+    <Content Include="Dashboard\documentation\build\include\advice.html" />
+    <Content Include="Dashboard\documentation\build\include\browsers.html" />
+    <Content Include="Dashboard\documentation\build\include\components.html" />
+    <Content Include="Dashboard\documentation\build\include\dependencies.html" />
+    <Content Include="Dashboard\documentation\build\include\download.html" />
+    <Content Include="Dashboard\documentation\build\include\faq.html" />
+    <Content Include="Dashboard\documentation\build\include\implementations.html" />
+    <Content Include="Dashboard\documentation\build\include\introduction.html" />
+    <Content Include="Dashboard\documentation\build\include\layout.html" />
+    <Content Include="Dashboard\documentation\build\include\license.html" />
+    <Content Include="Dashboard\documentation\build\include\plugins.html" />
+    <Content Include="Dashboard\documentation\build\include\upgrade.html" />
+    <Content Include="Dashboard\documentation\build\index.html" />
+    <Content Include="Dashboard\documentation\docs.js" />
+    <Content Include="Dashboard\documentation\index.html" />
+    <Content Include="Dashboard\documentation\style.css" />
+    <Content Include="Dashboard\Gruntfile.js" />
+    <Content Include="Dashboard\index.html" />
+    <Content Include="Dashboard\index2.html" />
+    <Content Include="Dashboard\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.js" />
+    <Content Include="Dashboard\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.min.js" />
+    <Content Include="Dashboard\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.css" />
+    <Content Include="Dashboard\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.min.css" />
+    <Content Include="Dashboard\plugins\chartjs\Chart.js" />
+    <Content Include="Dashboard\plugins\chartjs\Chart.min.js" />
+    <Content Include="Dashboard\plugins\ckeditor\adapters\jquery.js" />
+    <Content Include="Dashboard\plugins\ckeditor\build-config.js" />
+    <Content Include="Dashboard\plugins\ckeditor\ckeditor.js" />
+    <Content Include="Dashboard\plugins\ckeditor\config.js" />
+    <Content Include="Dashboard\plugins\ckeditor\contents.css" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\af.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\ar.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\bg.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\bn.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\bs.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\ca.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\cs.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\cy.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\da.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\de-ch.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\de.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\el.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\en-au.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\en-ca.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\en-gb.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\en.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\eo.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\es.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\et.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\eu.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\fa.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\fi.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\fo.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\fr-ca.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\fr.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\gl.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\gu.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\he.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\hi.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\hr.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\hu.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\id.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\is.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\it.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\ja.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\ka.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\km.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\ko.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\ku.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\lt.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\lv.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\mk.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\mn.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\ms.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\nb.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\nl.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\no.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\pl.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\pt-br.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\pt.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\ro.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\ru.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\si.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\sk.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\sl.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\sq.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\sr-latn.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\sr.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\sv.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\th.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\tr.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\tt.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\ug.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\uk.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\vi.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\zh-cn.js" />
+    <Content Include="Dashboard\plugins\ckeditor\lang\zh.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\af.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\de-ch.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\eu.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\fo.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\icons.png" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\magicline\images\icon-rtl.png" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\af.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\da.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\de-ch.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\eu.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\ko.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\lt.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\css\samples.css" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\img\github-top.png" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\img\header-bg.png" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\img\header-separator.png" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\img\logo.png" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\img\navigation-tip.png" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\index.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\js\sample.js" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\js\sf.js" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\ajax.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\api.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\appendto.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\assets\inlineall\logo.png" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\assets\posteddata.php" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\assets\sample.jpg" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\assets\uilanguages\languages.js" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\datafiltering.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\dialog\assets\my_dialog.js" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\dialog\dialog.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\divreplace.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\enterkey\enterkey.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.swf" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\htmlwriter\assets\outputforflash\swfobject.js" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\htmlwriter\outputforflash.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\htmlwriter\outputhtml.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\index.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\inlineall.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\inlinebycode.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\inlinetextarea.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\jquery.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\magicline\magicline.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\readonly.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\replacebyclass.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\replacebycode.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\sample.css" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\sample.js" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\sample_posteddata.php" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\tabindex.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\toolbar\toolbar.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\uicolor.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\uilanguages.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\wysiwygarea\fullpage.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\xhtmlstyle.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\css\fontello.css" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\font\fontello.svg" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\font\LICENSE.txt" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\index.html" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\js\abstracttoolbarmodifier.js" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\js\fulltoolbareditor.js" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\js\toolbarmodifier.js" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\js\toolbartextmodifier.js" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.css" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.js" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\lib\codemirror\javascript.js" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\lib\codemirror\neo.css" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.css" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.js" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\dialog.css" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\dialog_iequirks.css" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\editor.css" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\editor_iequirks.css" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\icons.png" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\icons_hidpi.png" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\images\close.png" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\images\hidpi\close.png" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\images\hidpi\lock.png" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\images\lock-open.png" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\images\lock.png" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\images\refresh.png" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\images\spinner.gif" />
+    <Content Include="Dashboard\plugins\ckeditor\styles.js" />
+    <Content Include="Dashboard\plugins\colorpicker\bootstrap-colorpicker.css" />
+    <Content Include="Dashboard\plugins\colorpicker\bootstrap-colorpicker.js" />
+    <Content Include="Dashboard\plugins\colorpicker\bootstrap-colorpicker.min.css" />
+    <Content Include="Dashboard\plugins\colorpicker\bootstrap-colorpicker.min.js" />
+    <Content Include="Dashboard\plugins\colorpicker\img\alpha-horizontal.png" />
+    <Content Include="Dashboard\plugins\colorpicker\img\alpha.png" />
+    <Content Include="Dashboard\plugins\colorpicker\img\hue-horizontal.png" />
+    <Content Include="Dashboard\plugins\colorpicker\img\hue.png" />
+    <Content Include="Dashboard\plugins\colorpicker\img\saturation.png" />
+    <Content Include="Dashboard\plugins\datatables\dataTables.bootstrap.css" />
+    <Content Include="Dashboard\plugins\datatables\dataTables.bootstrap.js" />
+    <Content Include="Dashboard\plugins\datatables\dataTables.bootstrap.min.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\AutoFill\css\dataTables.autoFill.css" />
+    <Content Include="Dashboard\plugins\datatables\extensions\AutoFill\css\dataTables.autoFill.min.css" />
+    <Content Include="Dashboard\plugins\datatables\extensions\AutoFill\examples\columns.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\AutoFill\examples\complete-callback.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\AutoFill\examples\fill-both.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\AutoFill\examples\fill-horizontal.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\AutoFill\examples\index.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\AutoFill\examples\scrolling.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\AutoFill\examples\simple.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\AutoFill\examples\step-callback.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\AutoFill\images\filler.png" />
+    <Content Include="Dashboard\plugins\datatables\extensions\AutoFill\js\dataTables.autoFill.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\AutoFill\js\dataTables.autoFill.min.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\AutoFill\Readme.txt" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\css\dataTables.colReorder.css" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\css\dataTables.colReorder.min.css" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\examples\alt_insert.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\examples\colvis.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\examples\col_filter.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\examples\fixedcolumns.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\examples\fixedheader.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\examples\index.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\examples\jqueryui.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\examples\new_init.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\examples\predefined.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\examples\realtime.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\examples\reset.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\examples\scrolling.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\examples\server_side.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\examples\simple.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\examples\state_save.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\images\insert.png" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\js\dataTables.colReorder.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\js\dataTables.colReorder.min.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\License.txt" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\css\dataTables.colVis.css" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\css\dataTables.colvis.jqueryui.css" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\css\dataTables.colVis.min.css" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\examples\button_order.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\examples\exclude_columns.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\examples\group_columns.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\examples\index.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\examples\jqueryui.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\examples\mouseover.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\examples\new_init.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\examples\restore.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\examples\simple.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\examples\text.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\examples\title_callback.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\examples\two_tables.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\examples\two_tables_identical.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\js\dataTables.colVis.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\js\dataTables.colVis.min.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\License.txt" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\css\dataTables.fixedColumns.css" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\css\dataTables.fixedColumns.min.css" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\examples\bootstrap.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\examples\colvis.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\examples\col_filter.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\examples\css_size.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\examples\index.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\examples\index_column.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\examples\left_right_columns.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\examples\right_column.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\examples\rowspan.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\examples\server-side-processing.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\examples\simple.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\examples\size_fixed.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\examples\size_fluid.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\examples\two_columns.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\js\dataTables.fixedColumns.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\js\dataTables.fixedColumns.min.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\License.txt" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedHeader\css\dataTables.fixedHeader.css" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedHeader\css\dataTables.fixedHeader.min.css" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedHeader\examples\header_footer.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedHeader\examples\index.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedHeader\examples\simple.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedHeader\examples\top_left_right.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedHeader\examples\two_tables.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedHeader\examples\zIndexes.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedHeader\js\dataTables.fixedHeader.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedHeader\js\dataTables.fixedHeader.min.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedHeader\Readme.txt" />
+    <Content Include="Dashboard\plugins\datatables\extensions\KeyTable\css\dataTables.keyTable.css" />
+    <Content Include="Dashboard\plugins\datatables\extensions\KeyTable\css\dataTables.keyTable.min.css" />
+    <Content Include="Dashboard\plugins\datatables\extensions\KeyTable\examples\events.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\KeyTable\examples\html.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\KeyTable\examples\index.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\KeyTable\examples\scrolling.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\KeyTable\examples\simple.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\KeyTable\js\dataTables.keyTable.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\KeyTable\js\dataTables.keyTable.min.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\KeyTable\Readme.txt" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\css\dataTables.responsive.css" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\child-rows\column-control.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\child-rows\custom-renderer.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\child-rows\disable-child-rows.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\child-rows\index.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\child-rows\right-column.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\child-rows\whole-row-control.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\display-control\auto.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\display-control\classes.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\display-control\complexHeader.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\display-control\fixedHeader.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\display-control\index.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\display-control\init-classes.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\index.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\initialisation\ajax.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\initialisation\className.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\initialisation\default.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\initialisation\index.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\initialisation\new.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\initialisation\option.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\styling\bootstrap.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\styling\compact.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\styling\foundation.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\styling\index.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\examples\styling\scrolling.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\js\dataTables.responsive.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\js\dataTables.responsive.min.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\License.txt" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Scroller\css\dataTables.scroller.css" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Scroller\css\dataTables.scroller.min.css" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Scroller\examples\api_scrolling.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Scroller\examples\data\2500.txt" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Scroller\examples\data\ssp.php" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Scroller\examples\index.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Scroller\examples\large_js_source.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Scroller\examples\server-side_processing.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Scroller\examples\simple.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Scroller\examples\state_saving.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Scroller\images\loading-background.png" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Scroller\js\dataTables.scroller.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Scroller\js\dataTables.scroller.min.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Scroller\Readme.txt" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\css\dataTables.tableTools.css" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\css\dataTables.tableTools.min.css" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\ajax.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\alter_buttons.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\bootstrap.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\button_text.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\collection.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\defaults.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\index.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\jqueryui.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\multiple_tables.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\multi_instance.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\new_init.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\pdf_message.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\plug-in.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\select_column.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\select_multi.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\select_os.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\select_single.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\simple.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\examples\swf_path.html" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\images\collection.png" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\images\collection_hover.png" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\images\copy.png" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\images\copy_hover.png" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\images\csv.png" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\images\csv_hover.png" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\images\pdf.png" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\images\pdf_hover.png" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\images\print.png" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\images\print_hover.png" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\images\xls.png" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\images\xls_hover.png" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\js\dataTables.tableTools.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\js\dataTables.tableTools.min.js" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\swf\copy_csv_xls.swf" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="Dashboard\plugins\datatables\images\sort_asc.png" />
+    <Content Include="Dashboard\plugins\datatables\images\sort_asc_disabled.png" />
+    <Content Include="Dashboard\plugins\datatables\images\sort_both.png" />
+    <Content Include="Dashboard\plugins\datatables\images\sort_desc.png" />
+    <Content Include="Dashboard\plugins\datatables\images\sort_desc_disabled.png" />
+    <Content Include="Dashboard\plugins\datatables\jquery.dataTables.css" />
+    <Content Include="Dashboard\plugins\datatables\jquery.dataTables.js" />
+    <Content Include="Dashboard\plugins\datatables\jquery.dataTables.min.css" />
+    <Content Include="Dashboard\plugins\datatables\jquery.dataTables.min.js" />
+    <Content Include="Dashboard\plugins\datatables\jquery.dataTables_themeroller.css" />
+    <Content Include="Dashboard\plugins\datepicker\bootstrap-datepicker.js" />
+    <Content Include="Dashboard\plugins\datepicker\datepicker3.css" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.ar.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.az.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.cy.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.da.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.de.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.el.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.es.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.et.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.fa.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.gl.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.he.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.id.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.is.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.it.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.ka.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.kk.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.mk.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.nl-BE.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.no.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.sq.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.th.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.ua.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.vi.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="Dashboard\plugins\datepicker\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="Dashboard\plugins\daterangepicker\daterangepicker.css" />
+    <Content Include="Dashboard\plugins\daterangepicker\daterangepicker.js" />
+    <Content Include="Dashboard\plugins\daterangepicker\moment.js" />
+    <Content Include="Dashboard\plugins\daterangepicker\moment.min.js" />
+    <Content Include="Dashboard\plugins\fastclick\fastclick.js" />
+    <Content Include="Dashboard\plugins\fastclick\fastclick.min.js" />
+    <Content Include="Dashboard\plugins\flot\excanvas.js" />
+    <Content Include="Dashboard\plugins\flot\excanvas.min.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.colorhelpers.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.colorhelpers.min.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.canvas.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.canvas.min.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.categories.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.categories.min.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.crosshair.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.crosshair.min.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.errorbars.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.errorbars.min.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.fillbetween.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.fillbetween.min.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.image.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.image.min.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.min.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.navigate.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.navigate.min.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.pie.min.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.resize.min.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.selection.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.selection.min.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.stack.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.stack.min.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.symbol.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.symbol.min.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.threshold.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.threshold.min.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.time.js" />
+    <Content Include="Dashboard\plugins\flot\jquery.flot.time.min.js" />
+    <Content Include="Dashboard\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="Dashboard\plugins\fullcalendar\fullcalendar.js" />
+    <Content Include="Dashboard\plugins\fullcalendar\fullcalendar.min.css" />
+    <Content Include="Dashboard\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Dashboard\plugins\fullcalendar\fullcalendar.print.css" />
+    <Content Include="Dashboard\plugins\iCheck\all.css" />
+    <Content Include="Dashboard\plugins\iCheck\flat\aero%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\aero.css" />
+    <Content Include="Dashboard\plugins\iCheck\flat\aero.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\blue%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\blue.css" />
+    <Content Include="Dashboard\plugins\iCheck\flat\blue.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\flat%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\flat.css" />
+    <Content Include="Dashboard\plugins\iCheck\flat\flat.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\green%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\green.css" />
+    <Content Include="Dashboard\plugins\iCheck\flat\green.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\grey%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\grey.css" />
+    <Content Include="Dashboard\plugins\iCheck\flat\grey.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\orange%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\orange.css" />
+    <Content Include="Dashboard\plugins\iCheck\flat\orange.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\pink%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\pink.css" />
+    <Content Include="Dashboard\plugins\iCheck\flat\pink.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\purple%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\purple.css" />
+    <Content Include="Dashboard\plugins\iCheck\flat\purple.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\red%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\red.css" />
+    <Content Include="Dashboard\plugins\iCheck\flat\red.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\yellow%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\yellow.css" />
+    <Content Include="Dashboard\plugins\iCheck\flat\yellow.png" />
+    <Content Include="Dashboard\plugins\iCheck\flat\_all.css" />
+    <Content Include="Dashboard\plugins\iCheck\futurico\futurico%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\futurico\futurico.css" />
+    <Content Include="Dashboard\plugins\iCheck\futurico\futurico.png" />
+    <Content Include="Dashboard\plugins\iCheck\icheck.js" />
+    <Content Include="Dashboard\plugins\iCheck\icheck.min.js" />
+    <Content Include="Dashboard\plugins\iCheck\line\aero.css" />
+    <Content Include="Dashboard\plugins\iCheck\line\blue.css" />
+    <Content Include="Dashboard\plugins\iCheck\line\green.css" />
+    <Content Include="Dashboard\plugins\iCheck\line\grey.css" />
+    <Content Include="Dashboard\plugins\iCheck\line\line%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\line\line.css" />
+    <Content Include="Dashboard\plugins\iCheck\line\line.png" />
+    <Content Include="Dashboard\plugins\iCheck\line\orange.css" />
+    <Content Include="Dashboard\plugins\iCheck\line\pink.css" />
+    <Content Include="Dashboard\plugins\iCheck\line\purple.css" />
+    <Content Include="Dashboard\plugins\iCheck\line\red.css" />
+    <Content Include="Dashboard\plugins\iCheck\line\yellow.css" />
+    <Content Include="Dashboard\plugins\iCheck\line\_all.css" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\aero%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\aero.css" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\aero.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\blue%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\blue.css" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\blue.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\green%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\green.css" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\green.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\grey%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\grey.css" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\grey.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\minimal%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\minimal.css" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\minimal.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\orange%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\orange.css" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\orange.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\pink%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\pink.css" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\pink.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\purple%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\purple.css" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\purple.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\red%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\red.css" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\red.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\yellow%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\yellow.css" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\yellow.png" />
+    <Content Include="Dashboard\plugins\iCheck\minimal\_all.css" />
+    <Content Include="Dashboard\plugins\iCheck\polaris\polaris%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\polaris\polaris.css" />
+    <Content Include="Dashboard\plugins\iCheck\polaris\polaris.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\aero%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\aero.css" />
+    <Content Include="Dashboard\plugins\iCheck\square\aero.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\blue%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\blue.css" />
+    <Content Include="Dashboard\plugins\iCheck\square\blue.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\green%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\green.css" />
+    <Content Include="Dashboard\plugins\iCheck\square\green.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\grey%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\grey.css" />
+    <Content Include="Dashboard\plugins\iCheck\square\grey.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\orange%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\orange.css" />
+    <Content Include="Dashboard\plugins\iCheck\square\orange.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\pink%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\pink.css" />
+    <Content Include="Dashboard\plugins\iCheck\square\pink.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\purple%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\purple.css" />
+    <Content Include="Dashboard\plugins\iCheck\square\purple.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\red%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\red.css" />
+    <Content Include="Dashboard\plugins\iCheck\square\red.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\square%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\square.css" />
+    <Content Include="Dashboard\plugins\iCheck\square\square.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\yellow%402x.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\yellow.css" />
+    <Content Include="Dashboard\plugins\iCheck\square\yellow.png" />
+    <Content Include="Dashboard\plugins\iCheck\square\_all.css" />
+    <Content Include="Dashboard\plugins\input-mask\jquery.inputmask.date.extensions.js" />
+    <Content Include="Dashboard\plugins\input-mask\jquery.inputmask.extensions.js" />
+    <Content Include="Dashboard\plugins\input-mask\jquery.inputmask.js" />
+    <Content Include="Dashboard\plugins\input-mask\jquery.inputmask.numeric.extensions.js" />
+    <Content Include="Dashboard\plugins\input-mask\jquery.inputmask.phone.extensions.js" />
+    <Content Include="Dashboard\plugins\input-mask\jquery.inputmask.regex.extensions.js" />
+    <Content Include="Dashboard\plugins\input-mask\phone-codes\readme.txt" />
+    <Content Include="Dashboard\plugins\ionslider\img\sprite-skin-flat.png" />
+    <Content Include="Dashboard\plugins\ionslider\img\sprite-skin-nice.png" />
+    <Content Include="Dashboard\plugins\ionslider\ion.rangeSlider.css" />
+    <Content Include="Dashboard\plugins\ionslider\ion.rangeSlider.min.js" />
+    <Content Include="Dashboard\plugins\ionslider\ion.rangeSlider.skinFlat.css" />
+    <Content Include="Dashboard\plugins\ionslider\ion.rangeSlider.skinNice.css" />
+    <Content Include="Dashboard\plugins\jQueryUI\jquery-ui.js" />
+    <Content Include="Dashboard\plugins\jQueryUI\jquery-ui.min.js" />
+    <Content Include="Dashboard\plugins\jQuery\jquery-2.2.3.min.js" />
+    <Content Include="Dashboard\plugins\jvectormap\jquery-jvectormap-1.2.2.css" />
+    <Content Include="Dashboard\plugins\jvectormap\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="Dashboard\plugins\jvectormap\jquery-jvectormap-usa-en.js" />
+    <Content Include="Dashboard\plugins\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Dashboard\plugins\knob\jquery.knob.js" />
+    <Content Include="Dashboard\plugins\morris\morris.css" />
+    <Content Include="Dashboard\plugins\morris\morris.js" />
+    <Content Include="Dashboard\plugins\morris\morris.min.js" />
+    <Content Include="Dashboard\plugins\pace\pace.css" />
+    <Content Include="Dashboard\plugins\pace\pace.js" />
+    <Content Include="Dashboard\plugins\pace\pace.min.css" />
+    <Content Include="Dashboard\plugins\pace\pace.min.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\ar.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\az.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\bg.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\ca.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\cs.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\da.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\de.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\el.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\en.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\es.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\et.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\eu.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\fa.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\fi.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\fr.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\gl.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\he.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\hi.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\hr.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\hu.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\id.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\is.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\it.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\ja.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\km.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\ko.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\lt.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\lv.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\mk.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\ms.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\nb.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\nl.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\pl.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\pt-BR.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\pt.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\ro.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\ru.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\sk.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\sr-Cyrl.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\sr.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\sv.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\th.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\tr.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\uk.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\vi.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\zh-CN.js" />
+    <Content Include="Dashboard\plugins\select2\i18n\zh-TW.js" />
+    <Content Include="Dashboard\plugins\select2\select2.css" />
+    <Content Include="Dashboard\plugins\select2\select2.full.js" />
+    <Content Include="Dashboard\plugins\select2\select2.full.min.js" />
+    <Content Include="Dashboard\plugins\select2\select2.js" />
+    <Content Include="Dashboard\plugins\select2\select2.min.css" />
+    <Content Include="Dashboard\plugins\select2\select2.min.js" />
+    <Content Include="Dashboard\plugins\slimScroll\jquery.slimscroll.js" />
+    <Content Include="Dashboard\plugins\slimScroll\jquery.slimscroll.min.js" />
+    <Content Include="Dashboard\plugins\sparkline\jquery.sparkline.js" />
+    <Content Include="Dashboard\plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="Dashboard\plugins\timepicker\bootstrap-timepicker.css" />
+    <Content Include="Dashboard\plugins\timepicker\bootstrap-timepicker.js" />
+    <Content Include="Dashboard\plugins\timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="Dashboard\plugins\timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="Dashboard\starter.html" />
+    <Content Include="Default.aspx" />
+    <Content Include="EndingInventory.aspx" />
+    <Content Include="Facility.aspx" />
+    <Content Include="FacilitySuppliesMap.aspx" />
+    <Content Include="FacilityVendorAccount.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Dashboard\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Dashboard\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="Dashboard\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Dashboard\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Dashboard\plugins\ckeditor\CHANGES.md" />
+    <Content Include="Dashboard\plugins\ckeditor\LICENSE.md" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\scayt\CHANGELOG.md" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\scayt\README.md" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="Dashboard\plugins\ckeditor\plugins\wsc\README.md" />
+    <Content Include="Dashboard\plugins\ckeditor\README.md" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\font\config.json" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\font\fontello.eot" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\font\fontello.ttf" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
+    <Content Include="Dashboard\plugins\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
+    <Content Include="Dashboard\plugins\ckeditor\skins\moono\readme.md" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColReorder\Readme.md" />
+    <Content Include="Dashboard\plugins\datatables\extensions\ColVis\Readme.md" />
+    <Content Include="Dashboard\plugins\datatables\extensions\FixedColumns\Readme.md" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\css\dataTables.responsive.scss" />
+    <Content Include="Dashboard\plugins\datatables\extensions\Responsive\Readme.md" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\images\psd\collection.psd" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\images\psd\copy document.psd" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\images\psd\file_types.psd" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\images\psd\printer.psd" />
+    <Content Include="Dashboard\plugins\datatables\extensions\TableTools\Readme.md" />
+    <Content Include="Dashboard\plugins\input-mask\phone-codes\phone-be.json" />
+    <Content Include="Dashboard\plugins\input-mask\phone-codes\phone-codes.json" />
+    <Content Include="Images\Add.png" />
+    <Content Include="Images\Add1.png" />
+    <Content Include="Images\Attachment.png" />
+    <Content Include="Images\blue_x.png" />
+    <Content Include="Images\btnNo.jpg" />
+    <Content Include="Images\btnyes.jpg" />
+    <Content Include="Images\chosen-sprite%402x.png" />
+    <Content Include="Images\chosen-sprite.png" />
+    <Content Include="Images\Close.gif" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\Del.png" />
+    <Content Include="Images\Del1.png" />
+    <Content Include="Images\Delete.png" />
+    <Content Include="Images\Deletegreen.png" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\edit1.png" />
+    <Content Include="Images\email_icon.png" />
+    <Content Include="Images\Eyeview.png" />
+    <Content Include="Images\inven.jpg" />
+    <Content Include="Images\LoadingCircle.gif" />
+    <Content Include="Images\OK.jpg" />
+    <Content Include="Images\Print.png" />
+    <Content Include="Images\Readmore.png" />
+    <Content Include="Images\save.png" />
+    <Content Include="Images\Upload.png" />
+    <Content Include="Images\View.png" />
+    <Content Include="Images\void.png" />
+    <Content Include="img\andy.png" />
+    <Content Include="img\Dot_Progress_Load.gif" />
+    <Content Include="img\inventory.png" />
+    <Content Include="img\inventory_Full_Logo.png" />
+    <Content Include="img\inventry_Logo.png" />
+    <Content Include="ItemCategory.aspx" />
+    <Content Include="MachineMaster.aspx" />
+    <Content Include="MachinePartRequest.aspx" />
+    <Content Include="MachinePartsOrder.aspx" />
+    <Content Include="MachinePartsReceiveOrder.aspx" />
+    <Content Include="MedicalSupplies.aspx" />
+    <Content Include="MedicalSuppliesReceivingOrder.aspx" />
+    <Content Include="MedicalSuppliesRequest.aspx" />
+    <Content Include="MedicalSuppliesRequestOrder.aspx" />
+    <Content Include="PrintPdf.aspx" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BAL.BALUser.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetCorporateFacility_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetLoginDetails_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetUserPagePermission_Result.datasource" />
+    <Content Include="Inven.Master" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetFacilityByListCorporateID_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetVendorByFacilityID_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetFacilityVendorAccount_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchMedicalSupplyRequest_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetList_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetMedicalsuppliesItem_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.ValidateMedicalSuppliesItem_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindMedicalsupplymasterandDetail_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindMedicalsupplymaster_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindMedicalsupplyDetail_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetOrderPeriod_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetUserDetails_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.FindDuplicateShippingValue.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SavedShippingValue_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.FindDuplicateTimeDeliveryValue.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SavedTimeDeliveryValue_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.AddMedicalsupplyitem_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetMedicalSupplyRequestMaster_Result.datasource" />
+    <Content Include="Scripts\CDN.js\Cdn.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Dashboard\.gitignore" />
+    <Content Include="Dashboard\.jshintrc" />
+    <Content Include="Dashboard\bower.json" />
+    <Content Include="Dashboard\changelog.md" />
+    <Content Include="Dashboard\composer.json" />
+    <Content Include="Dashboard\LICENSE" />
+    <Content Include="Dashboard\package.json" />
+    <Content Include="Dashboard\README.md" />
+    <Content Include="Dashboard\yarn.lock" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetEquipmentCategory_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetServiceCategory_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetServiceRequestetailsbyServiceRequestMasterID_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetServiceRequestMaster_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchServiceRequestMaster_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetEquipementListforCapital_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetEquipementSubCategory_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetServiceList_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetEquipementList_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetServiceTempAttachment_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetServiceAttachment_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindServiceRequestReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.CheckServicelist_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SavedServiceCategory_Result.datasource" />
+    <Content Include="Reports\CapitalItemRequestReview.rdlc" />
+    <Content Include="Reports\CapitalOrderSummaryReport.rdlc" />
+    <Content Include="Reports\CapitalPOPDF.rdlc" />
+    <Content Include="Reports\CapitalPOPDF12.rdlc" />
+    <Content Include="Reports\CapitalPoReport.rdlc" />
+    <Content Include="Reports\CapitalReceivePDF.rdlc" />
+    <Content Include="Reports\CapitalReceivingDetailsReport.rdlc" />
+    <Content Include="Reports\CapitalReceivingSummaryPrintAllReport.rdlc" />
+    <Content Include="Reports\CapitalReceivingSummaryReport.rdlc" />
+    <Content Include="Reports\CorporateSummary.rdlc" />
+    <Content Include="Reports\EndingInventory.rdlc" />
+    <Content Include="Reports\EquipementCategoryReport.rdlc" />
+    <Content Include="Reports\FacilityDetailsReport.rdlc" />
+    <Content Include="Reports\FacilitySummary.rdlc" />
+    <Content Include="Reports\FacilitySupplyMapSummary.rdlc" />
+    <Content Include="Reports\FacilityVendorAccountReport.rdlc" />
+    <Content Include="Reports\ItemCategoryReport.rdlc" />
+    <Content Include="Reports\ItemDetailsReport.rdlc" />
+    <Content Include="Reports\ItemSummaryReport.rdlc" />
+    <Content Include="Reports\ITOrderSummaryReport.rdlc" />
+    <Content Include="Reports\ITReceivingDetailsReport.rdlc" />
+    <Content Include="Reports\ITReceivingPDFVoid.rdlc" />
+    <Content Include="Reports\ITReceivingSummaryPrintAllReport.rdlc" />
+    <Content Include="Reports\ITReceivingSummaryReport.rdlc" />
+    <Content Include="Reports\ITRequest.rdlc" />
+    <Content Include="Reports\ITRequestPOpdfDS.rdlc" />
+    <Content Include="Reports\ITRequestPOpdfDS12.rdlc" />
+    <Content Include="Reports\ITRequestPoReport.rdlc" />
+    <Content Include="Reports\MachineMasterDetailReport.rdlc" />
+    <Content Include="Reports\MachineMasterSummaryReport.rdlc" />
+    <Content Include="Reports\MachinePartsOrderSummary.rdlc" />
+    <Content Include="Reports\MachinePartsPOPDF.rdlc" />
+    <Content Include="Reports\MachinePartsPOPDF12.rdlc" />
+    <Content Include="Reports\MachinePartsReceive.rdlc" />
+    <Content Include="Reports\MachinePartsReceivingDetails.rdlc" />
+    <Content Include="Reports\MachinePartsReceivingSummaryReport.rdlc" />
+    <Content Include="Reports\MachinePartsReview.rdlc" />
+    <Content Include="Reports\MachinePartsSummaryReport.rdlc" />
+    <Content Include="Reports\MachinePOReview.rdlc" />
+    <Content Include="Reports\MachineReceivePDF.rdlc" />
+    <Content Include="Reports\MedicalSuppliesOrderSummary.rdlc" />
+    <Content Include="Reports\MedicalSuppliesPOReport.rdlc" />
+    <Content Include="Reports\MedicalsuppliesReceivingSummary.rdlc" />
+    <Content Include="Reports\MedicalSuppliesReceivingSummaryPrintAllReport.rdlc" />
+    <Content Include="Reports\MedicalSuppliesReview.rdlc" />
+    <Content Include="Reports\MedicalSupplyPDFPO.rdlc" />
+    <Content Include="Reports\MedicalsupplyReceiveVoidPDF.rdlc" />
+    <Content Include="Reports\MedicalSupplyReceivingDetail.rdlc" />
+    <Content Include="Reports\ServiceOrderSummaryReport.rdlc" />
+    <Content Include="Reports\ServiceReceivePOPDF.rdlc" />
+    <Content Include="Reports\ServiceReceivingSummaryPrintAllReport.rdlc" />
+    <Content Include="Reports\ServiceReqestReview.rdlc" />
+    <Content Include="Reports\ServiceRequestOrderReview.rdlc" />
+    <Content Include="Reports\ServiceRequestPDFPO.rdlc" />
+    <Content Include="Reports\ServiceRequestPDFPO12.rdlc" />
+    <Content Include="Reports\ServiceRequestPOReport.rdlc" />
+    <Content Include="Reports\TransferInHistory.rdlc" />
+    <Content Include="Reports\TransferInSummary.rdlc" />
+    <Content Include="Reports\TransferOutHistory.rdlc" />
+    <Content Include="Reports\TransferOutSummary.rdlc" />
+    <Content Include="Reports\UomReport.rdlc" />
+    <Content Include="Reports\UserPermissionReport.rdlc" />
+    <Content Include="Reports\UserSummaryReport.rdlc" />
+    <Content Include="Reports\VendorDetailsReport.rdlc" />
+    <Content Include="Reports\VendorItemMapSummary.rdlc" />
+    <Content Include="Reports\VendorOrderDueReport.rdlc" />
+    <Content Include="Reports\VendorSummaryReport.rdlc" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetActiveServiceListvalue_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SavedServiceList_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchITRequest_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindRequestITDetailsfromPO_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.ValidITEquipment.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetRequestITMaster_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindRequestITPartsReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetITRequestDetailsbyMasterID_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindEquipementsubcategoryFORIT_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindEquipementListFORIT_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetSerialNo.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetMPRMasterOrder_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetMPRMaster_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetCapitalItemDetails_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetCapitalItemMaster_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchCapitalItemRequestMaster_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindCapitalItemRequestReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetEquipmentSubCategoryforCapital_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.ValidCapitalEquipment.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchMPRMaster_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetMPRDetailsbyMPRMasterID_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.ValidMachineEquipment.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindMachinePartsReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetMachinemasterDetails_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindMedicalSupplyDetailsReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetMSROrderContentPO_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetMSRReceivingsummaryReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetSuperAdminDetails_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.UpdateMSRReceivingMaster_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.ValidateMedicalSuppliesOrder_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindMedicalsupplyReceivingDetail_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchServiceRequestReceivingOrder_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetSROrderContentPOReports_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetServiceReceiveOrder_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindITNNOvalues_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchITReceiving_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.UpdateITRecevingMaster_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindITReceivingsummaryReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetITROrderContentPO_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindITReceivingDetailsReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindCapitalReceivingsummaryReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetCapitalPOReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetCpoDetails_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetCPROMasterReview_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetCROrderContentPO_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchCapitalReceivingMaster_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.UpdateCapitalRecevingMaster_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GETMPOValues_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GETMPROValues_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.UpdateMachinePartsReceivingMaster_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetMPOrderContentPO_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindMachineReceiveSummaryReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindMachineReceivingDetailsReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetMedicalSupplyPoReportDetails_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetMSRMultipleIDs_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchMedicalSupplyRequestPo_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetServiceRequestPOGenerateDetails_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchServiceRequestPurchaseOrder_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetServiceRequestActionByMasterID_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetServiceRequestPoReportDetails_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchServiceRequestPurchaseOrderDetails_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GETITRequestPODetails_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetRwdlsafterordergeneration_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchRequestITPO_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindITRequestPOReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchCapitalPO_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetCapitalOrderCPONo_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindMachinePOReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetMachinePartsOrderMPONo_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchMPRMasterOrder_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.EndingInventoryReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetCategoryByListVendorID_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetReceivedQtyInfo_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetTransferINQtyInfo_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchEndingInventory_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetTransferOutQtyInfo_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchCorporateMaster_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindCorporateMasterReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.chkvalidcorporate_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindCorporateMaster_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventroy.Service.SearchCorporateMaster.datasource" />
+    <Content Include="CorporateMasterDS.xsc">
+      <DependentUpon>CorporateMasterDS.xsd</DependentUpon>
+    </Content>
+    <None Include="Connected Services\Inventoryserref\InventoryService.wsdl" />
+    <None Include="Connected Services\Inventoryserref\InventoryService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Inventoryserref\InventoryService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Inventoryserref\InventoryService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Inventoryserref\InventoryService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Inventoryserref\InventoryService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Inventoryserref\InventoryService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Inventoryserref\InventoryService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Inventoryserref\InventoryService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CorporateMasterDS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="CorporateMasterDS.xss">
+      <DependentUpon>CorporateMasterDS.xsd</DependentUpon>
+    </Content>
+    <Content Include="Properties\DataSources\Inventory.Service.BindEquipement_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindFacilityDetailsReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindFacility_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindRolesForFacility_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetFacility_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetState_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetUserRoleForFacility_Result.datasource" />
+    <Content Include="Reports\FacilityReportDS.xsc">
+      <DependentUpon>FacilityReportDS.xsd</DependentUpon>
+    </Content>
+    <Content Include="FacilityReportDS.xsc">
+      <DependentUpon>FacilityReportDS.xsd</DependentUpon>
+    </Content>
+    <None Include="FacilityReportDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FacilityReportDS.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="FacilityReportDS.xss">
+      <DependentUpon>FacilityReportDS.xsd</DependentUpon>
+    </Content>
+    <Content Include="ItemCategoryReportDS.xsc">
+      <DependentUpon>ItemCategoryReportDS.xsd</DependentUpon>
+    </Content>
+    <Content Include="GetItemDetailsReportDS.xsc">
+      <DependentUpon>GetItemDetailsReportDS.xsd</DependentUpon>
+    </Content>
+    <None Include="GetItemDetailsReportDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GetItemDetailsReportDS1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="GetItemDetailsReportDS.xss">
+      <DependentUpon>GetItemDetailsReportDS.xsd</DependentUpon>
+    </Content>
+    <Content Include="GetItemSummaryReportDS.xsc">
+      <DependentUpon>GetItemSummaryReportDS.xsd</DependentUpon>
+    </Content>
+    <None Include="GetItemSummaryReportDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GetItemSummaryReportDS1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="GetItemSummaryReportDS.xss">
+      <DependentUpon>GetItemSummaryReportDS.xsd</DependentUpon>
+    </Content>
+    <None Include="ItemCategoryReportDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ItemCategoryReportDS1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ItemCategoryReportDS.xss">
+      <DependentUpon>ItemCategoryReportDS.xsd</DependentUpon>
+    </Content>
+    <Content Include="Properties\DataSources\Inventory.Service.GetCategoryReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetItemCategory_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchItemCategory_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetItemDescName_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetItemDetailsReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetItemMapping_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetItemSummaryReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.Validgpbillcode_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.ddlCurrency_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetUom_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindVendorItemMapReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetDrpItemsByCategory_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetItemMap_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetvendorDetails_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetVendorItemMappingPage_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchVendorItemMap.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetUOMName_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetUomReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindPermissionforUser.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetUserRoleandFacility_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.IsUserExist.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchUserDetails_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.Validuseremail_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindPermissionforUser_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindPermission_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetdrpMainMenu_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetdrpSubMenu_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetMultiUserApprove_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetPermission_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetUserApprovePermission_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchVendorItemMap_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.ValidCapitalEquipment_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.ValidITEquipment_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindMultiRolesPermission_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetUserPermissionReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetVendorReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GETVendorUniqueName_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetVendorDetailsReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindFacilityVendorAccountReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchFacilityVendorAcct_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventroy.Service.GetVendor.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetVendor_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventroy.Service.SearchVendorOrderType.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.ValidateVendorOrderType_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetVendorOrderDueReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindItem_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindVendorOrderDue_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventroy.Service.GetFacilitySupplyGird.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetFacilitySuppliesMapReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.CheckEquipmentlist_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetActiveEquipementListvalue_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetActiveEquipementSubCategoryvalue_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetMachineMasterDetailsReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetMachineMasterReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SavedEquipmentCategory_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchMachinemasterdetails_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetMachineMasterbasedMachineID_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SavedEquipmentList_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SavedEquipmentSubCategory_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetCategoryByListFacilityID_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchTransferIn_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetCatagoryByFacilityID_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetEmailNotificationforTransfer_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchTransferOut_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindTransferOutReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetFromEmailforTransfer_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventroy.Service.GetTransferNo.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindTransferOutHistoryReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetTransferInHistoryReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchTransferOutHistory_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.GetVendorOrderdueRemainderReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventroy.Service.GetItem.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchMedicalSuppliesReceiving_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchMedicalSuppliesReceivingSummaryReport.datasource" />
+    <Content Include="Properties\DataSources\Inventroy.Service.SearchITReceivingSummaryReport.datasource" />
+    <Content Include="Properties\DataSources\Inventroy.Service.SearchCapitalReceivingSummaryReport.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.BindCapitalDetailsReport_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventory.Service.SearchMachinePartsReceive_Result.datasource" />
+    <Content Include="Properties\DataSources\Inventroy.Service.SearchMachinePartsReceiveSummaryReport.datasource" />
+    <None Include="Reports\FacilityReportDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FacilityReportDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Reports\FacilityReportDS.xss">
+      <DependentUpon>FacilityReportDS.xsd</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Reportviewer.aspx" />
+    <Content Include="RequestIT.aspx" />
+    <Content Include="RequestITPO.aspx" />
+    <Content Include="RequestITReceiving.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\CDN\Cdn.js" />
+    <Content Include="Scripts\chosen.jquery.js" />
+    <Content Include="Scripts\datepicker.js" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery.sumoselect.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\notification.js" />
+    <Content Include="Scripts\notify.js" />
+    <Content Include="Scripts\Reports\Costpertx.js" />
+    <Content Include="Scripts\Reports\CumulativebyItemCategory.js" />
+    <Content Include="Scripts\Reports\CumulativebyItemDesc.js" />
+    <Content Include="Scripts\Reports\MonthlyDrugssupplies.js" />
+    <Content Include="Scripts\Reports\MonthlyEndingInventory.js" />
+    <Content Include="Scripts\Reports\MonthlyInventory.js" />
+    <Content Include="Scripts\Reports\MonthlyPurchase.js" />
+    <Content Include="Scripts\Reports\MonthlyUsage.js" />
+    <Content Include="Scripts\Reports\Reportviewer.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="ServiceRequest.aspx" />
+    <Content Include="ServiceRequestPO.aspx" />
+    <Content Include="ServiceRequestReceiving.aspx" />
+    <Content Include="Site.Master" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TransferHistory.aspx" />
+    <Content Include="TransferIn.aspx" />
+    <Content Include="TransferOut.aspx" />
+    <Content Include="UomMaster.aspx" />
+    <Content Include="UserPermission.aspx" />
+    <Content Include="Vendor.aspx" />
+    <Content Include="VendorItemMap.aspx" />
+    <Content Include="VendorOrderDue.aspx" />
+    <Content Include="VendorOrderDueRemainder.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddUser.aspx.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddUser.aspx.designer.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CapitalItem.aspx.cs">
+      <DependentUpon>CapitalItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapitalItem.aspx.designer.cs">
+      <DependentUpon>CapitalItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapitalOrder.aspx.cs">
+      <DependentUpon>CapitalOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapitalOrder.aspx.designer.cs">
+      <DependentUpon>CapitalOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapitalReceivingOrder.aspx.cs">
+      <DependentUpon>CapitalReceivingOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapitalReceivingOrder.aspx.designer.cs">
+      <DependentUpon>CapitalReceivingOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Constant.cs" />
+    <Compile Include="Class\EmailController.cs" />
+    <Compile Include="Class\Functions.cs" />
+    <Compile Include="Class\GetIPAddress.cs" />
+    <Compile Include="Class\Page_Controls.cs" />
+    <Compile Include="Class\SystemAddress.cs" />
+    <Compile Include="Connected Services\Inventoryserref\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CorpEquipmentMap.aspx.cs">
+      <DependentUpon>CorpEquipmentMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CorpEquipmentMap.aspx.designer.cs">
+      <DependentUpon>CorpEquipmentMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CorporateMaster.aspx.cs">
+      <DependentUpon>CorporateMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CorporateMaster.aspx.designer.cs">
+      <DependentUpon>CorporateMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardPage.aspx.cs">
+      <DependentUpon>DashboardPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashboardPage.aspx.designer.cs">
+      <DependentUpon>DashboardPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EndingInventory.aspx.cs">
+      <DependentUpon>EndingInventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EndingInventory.aspx.designer.cs">
+      <DependentUpon>EndingInventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facility.aspx.cs">
+      <DependentUpon>Facility.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facility.aspx.designer.cs">
+      <DependentUpon>Facility.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FacilityReportDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacilityReportDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FacilitySuppliesMap.aspx.cs">
+      <DependentUpon>FacilitySuppliesMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FacilitySuppliesMap.aspx.designer.cs">
+      <DependentUpon>FacilitySuppliesMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FacilityVendorAccount.aspx.cs">
+      <DependentUpon>FacilityVendorAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FacilityVendorAccount.aspx.designer.cs">
+      <DependentUpon>FacilityVendorAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetItemDetailsReportDS.Designer.cs" />
+    <Compile Include="GetItemDetailsReportDS1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetItemDetailsReportDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GetItemSummaryReportDS.Designer.cs" />
+    <Compile Include="GetItemSummaryReportDS1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetItemSummaryReportDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Inven.Master.cs">
+      <DependentUpon>Inven.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inven.Master.designer.cs">
+      <DependentUpon>Inven.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ItemCategory.aspx.cs">
+      <DependentUpon>ItemCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemCategory.aspx.designer.cs">
+      <DependentUpon>ItemCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemCategoryReportDS.Designer.cs" />
+    <Compile Include="ItemCategoryReportDS1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemCategoryReportDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MachineMaster.aspx.cs">
+      <DependentUpon>MachineMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaster.aspx.designer.cs">
+      <DependentUpon>MachineMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MachinePartRequest.aspx.cs">
+      <DependentUpon>MachinePartRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachinePartRequest.aspx.designer.cs">
+      <DependentUpon>MachinePartRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MachinePartsOrder.aspx.cs">
+      <DependentUpon>MachinePartsOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachinePartsOrder.aspx.designer.cs">
+      <DependentUpon>MachinePartsOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MachinePartsReceiveOrder.aspx.cs">
+      <DependentUpon>MachinePartsReceiveOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachinePartsReceiveOrder.aspx.designer.cs">
+      <DependentUpon>MachinePartsReceiveOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalSupplies.aspx.cs">
+      <DependentUpon>MedicalSupplies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicalSupplies.aspx.designer.cs">
+      <DependentUpon>MedicalSupplies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalSuppliesReceivingOrder.aspx.cs">
+      <DependentUpon>MedicalSuppliesReceivingOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicalSuppliesReceivingOrder.aspx.designer.cs">
+      <DependentUpon>MedicalSuppliesReceivingOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalSuppliesRequest.aspx.cs">
+      <DependentUpon>MedicalSuppliesRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicalSuppliesRequest.aspx.designer.cs">
+      <DependentUpon>MedicalSuppliesRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalSuppliesRequestOrder.aspx.cs">
+      <DependentUpon>MedicalSuppliesRequestOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicalSuppliesRequestOrder.aspx.designer.cs">
+      <DependentUpon>MedicalSuppliesRequestOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPdf.aspx.cs">
+      <DependentUpon>PrintPdf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintPdf.aspx.designer.cs">
+      <DependentUpon>PrintPdf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\FacilityReportDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacilityReportDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportviewer.aspx.cs">
+      <DependentUpon>Reportviewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportviewer.aspx.designer.cs">
+      <DependentUpon>Reportviewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestIT.aspx.cs">
+      <DependentUpon>RequestIT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestIT.aspx.designer.cs">
+      <DependentUpon>RequestIT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestITPO.aspx.cs">
+      <DependentUpon>RequestITPO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestITPO.aspx.designer.cs">
+      <DependentUpon>RequestITPO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestITReceiving.aspx.cs">
+      <DependentUpon>RequestITReceiving.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestITReceiving.aspx.designer.cs">
+      <DependentUpon>RequestITReceiving.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceRequest.aspx.cs">
+      <DependentUpon>ServiceRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServiceRequest.aspx.designer.cs">
+      <DependentUpon>ServiceRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceRequestPO.aspx.cs">
+      <DependentUpon>ServiceRequestPO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServiceRequestPO.aspx.designer.cs">
+      <DependentUpon>ServiceRequestPO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceRequestReceiving.aspx.cs">
+      <DependentUpon>ServiceRequestReceiving.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServiceRequestReceiving.aspx.designer.cs">
+      <DependentUpon>ServiceRequestReceiving.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TransferHistory.aspx.cs">
+      <DependentUpon>TransferHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransferHistory.aspx.designer.cs">
+      <DependentUpon>TransferHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransferIn.aspx.cs">
+      <DependentUpon>TransferIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransferIn.aspx.designer.cs">
+      <DependentUpon>TransferIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransferOut.aspx.cs">
+      <DependentUpon>TransferOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransferOut.aspx.designer.cs">
+      <DependentUpon>TransferOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UomMaster.aspx.cs">
+      <DependentUpon>UomMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UomMaster.aspx.designer.cs">
+      <DependentUpon>UomMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPermission.aspx.cs">
+      <DependentUpon>UserPermission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPermission.aspx.designer.cs">
+      <DependentUpon>UserPermission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor.aspx.cs">
+      <DependentUpon>Vendor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor.aspx.designer.cs">
+      <DependentUpon>Vendor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VendorItemMap.aspx.cs">
+      <DependentUpon>VendorItemMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VendorItemMap.aspx.designer.cs">
+      <DependentUpon>VendorItemMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VendorOrderDue.aspx.cs">
+      <DependentUpon>VendorOrderDue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VendorOrderDue.aspx.designer.cs">
+      <DependentUpon>VendorOrderDue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VendorOrderDueRemainder.aspx.cs">
+      <DependentUpon>VendorOrderDueRemainder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VendorOrderDueRemainder.aspx.designer.cs">
+      <DependentUpon>VendorOrderDueRemainder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Dashboard\plugins\bootstrap-slider\" />
+    <Folder Include="Scripts\CDNScript\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inventory.Service\Inventory.Service.csproj">
+      <Project>{96e889b6-bbe5-4e40-8423-a4af55142563}</Project>
+      <Name>Inventory.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\Inventoryserref\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64381</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44321/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
